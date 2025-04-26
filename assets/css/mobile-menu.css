@@ -1,7 +1,7 @@
 /*------------------------------
  MOBILE MENU
  ------------------------------*/
-.Fhavy-Scent-menu-clone-wrap {
+.Stelina-menu-clone-wrap {
     position: fixed;
     top: 0;
     left: -320px;
@@ -18,16 +18,16 @@
     box-shadow: 3px 5px 14px -3px rgba(0, 0, 0, 0.11);
     color: #000;
 }
-.Fhavy-Scent-menu-clone-wrap.open {
+.Stelina-menu-clone-wrap.open {
     left: 0;
 }
-.Fhavy-Scent-menu-panels-actions-wrap {
+.Stelina-menu-panels-actions-wrap {
     border-bottom: 1px solid #eee;
     height: 50px;
     position: relative;
 }
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-close-btn,
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel {
+.Stelina-menu-panels-actions-wrap .Stelina-menu-close-btn,
+.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -39,51 +39,51 @@
     line-height: 50px;
     color: #000;
 }
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-close-btn:hover,
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel:hover {
+.Stelina-menu-panels-actions-wrap .Stelina-menu-close-btn:hover,
+.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel:hover {
     color: #000;
 }
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel {
+.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel {
     right: inherit;
     left: 0;
     border: none;
     border-right: 1px solid #eee;
     
 }
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title {
+.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title {
     display: block;
     text-align: center;
     line-height: 50px;
     padding: 0 50px;
     text-transform: uppercase;
 }
-.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel:before {
+.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel:before {
     content: "\f104";
     font-family: FontAwesome;
 }
-.Fhavy-Scent-menu-panel > ul {
+.Stelina-menu-panel > ul {
     padding: 0;
     margin: 0;
 }
-.Fhavy-Scent-menu-panel li {
+.Stelina-menu-panel li {
     list-style: none;
     position: relative;
 }
-.Fhavy-Scent-menu-panel > ul > li {
+.Stelina-menu-panel > ul > li {
     padding: 0 20px;
     border-bottom: 1px solid #eee;
 }
-.Fhavy-Scent-menu-panel > ul > li > a {
+.Stelina-menu-panel > ul > li > a {
     display: block;
     line-height: 50px;
     color: #000;
     text-transform: uppercase;
 }
-.Fhavy-Scent-menu-panel > ul > li:hover > a,
-.Fhavy-Scent-menu-panel > ul > li.active > a {
+.Stelina-menu-panel > ul > li:hover > a,
+.Stelina-menu-panel > ul > li.active > a {
     color: #000;
 }
-.Fhavy-Scent-menu-next-panel {
+.Stelina-menu-next-panel {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -93,14 +93,14 @@
     right: 0;
     z-index: 10;
 }
-.Fhavy-Scent-menu-next-panel:before {
+.Stelina-menu-next-panel:before {
     content: "\f105";
     font-family: FontAwesome;
 }
-.Fhavy-Scent-menu-clone-wrap .toggle-submenu {
+.Stelina-menu-clone-wrap .toggle-submenu {
     display: none !important;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panels {
+.Stelina-menu-clone-wrap .Stelina-menu-panels {
     background: inherit;
     border-color: inherit;
     z-index: 0;
@@ -109,10 +109,10 @@
     height: calc(100% - 50px);
     position: relative;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panel {
+.Stelina-menu-clone-wrap .Stelina-menu-panel {
     background-color: #fff;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panel.Fhavy-Scent-menu-sub-panel {
+.Stelina-menu-clone-wrap .Stelina-menu-panel.Stelina-menu-sub-panel {
     border-color: #fff;
     bottom: 0;
     box-sizing: border-box;
@@ -128,29 +128,29 @@
     transition: all 0.2s ease 0s;
     z-index: 0;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panel.Fhavy-Scent-menu-panel-opened {
+.Stelina-menu-clone-wrap .Stelina-menu-panel.Stelina-menu-panel-opened {
     transform: translateX(0);
     z-index: 999;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-sub-opened {
+.Stelina-menu-clone-wrap .Stelina-menu-sub-opened {
     z-index: 1;
     opacity: 0;
     visibility: hidden;
 }
-.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-hidden {
+.Stelina-menu-clone-wrap .Stelina-menu-hidden {
     display: block !important;
     opacity: 0;
     visibility: hidden;
 }
-.Fhavy-Scent-menu-clone-wrap .submenu.mega-menu {
+.Stelina-menu-clone-wrap .submenu.mega-menu {
     padding: 20px;
     max-width: 100% !important;
     width: 100% !important;
 }
-.Fhavy-Scent-menu li > a > .icon {
+.Stelina-menu li > a > .icon {
     margin-right: 10px;
 }
-.Fhavy-Scent-menu-panel-main {
+.Stelina-menu-panel-main {
     position: absolute;
     top: 0;
     right: 0;
@@ -164,23 +164,23 @@
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
-.Fhavy-Scent-menu-panel.Fhavy-Scent-menu-panel-opened .submenu{
+.Stelina-menu-panel.Stelina-menu-panel-opened .submenu{
     opacity: 1;
     visibility: visible;
 }
-.Fhavy-Scent-menu-panel > .mega-menu .widget-custom-menu {
+.Stelina-menu-panel > .mega-menu .widget-custom-menu {
     width: 100%;
 }
-.Fhavy-Scent-menu-panels .menu-item-has-children > a::after {
+.Stelina-menu-panels .menu-item-has-children > a::after {
     display: none;
 }
-.Fhavy-Scent-menu-panel.Fhavy-Scent-menu-panel-opened .menu-page{
+.Stelina-menu-panel.Stelina-menu-panel-opened .menu-page{
     background-image: none;
 }
-.Fhavy-Scent-menu-panel .main-menu > li > a,.Fhavy-Scent-menu-panel .Fhavy-Scent-demolink .title,
-.Fhavy-Scent-menu-panel .mega-menu .Fhavy-Scent-custommenu .widgettitle{
+.Stelina-menu-panel .main-menu > li > a,.Stelina-menu-panel .Stelina-demolink .title,
+.Stelina-menu-panel .mega-menu .Stelina-custommenu .widgettitle{
     color: #222222 !important;
 }
-.Fhavy-Scent-menu-panel .mega-menu .Fhavy-Scent-custommenu ul li{
+.Stelina-menu-panel .mega-menu .Stelina-custommenu ul li{
     color: #555;
 }

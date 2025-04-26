@@ -36,14 +36,14 @@
         }
     }
 
-    function Fhavy-Scent_resize_megamenu() {
+    function Stelina_resize_megamenu() {
         var window_size = jQuery('body').innerWidth();
-        window_size += Fhavy-Scent_get_scrollbar_width();
-        if ( $('.Fhavy-Scent-menu-wapper.horizontal .item-megamenu').length > 0 && window_size > 991 ) {
-            $('.Fhavy-Scent-menu-wapper.horizontal .item-megamenu').each(function () {
+        window_size += Stelina_get_scrollbar_width();
+        if ( $('.Stelina-menu-wapper.horizontal .item-megamenu').length > 0 && window_size > 991 ) {
+            $('.Stelina-menu-wapper.horizontal .item-megamenu').each(function () {
                 var _this            = $(this),
                     _data_responsive = _this.children('.megamenu').data('responsive'),
-                    _container       = _this.closest('.Fhavy-Scent-menu-wapper');
+                    _container       = _this.closest('.Stelina-menu-wapper');
                 if ( _data_responsive != '' )
                     _container = _this.closest(_data_responsive);
 
@@ -55,8 +55,8 @@
     /**==============================
      Auto width Vertical menu
      ===============================**/
-    function Fhavy-Scent_auto_width_vertical_menu() {
-        $('.Fhavy-Scent-menu-wapper.vertical.support-mega-menu').each(function () {
+    function Stelina_auto_width_vertical_menu() {
+        $('.Stelina-menu-wapper.vertical.support-mega-menu').each(function () {
             var menu_offset = $(this).offset(),
                 menu_width  = parseInt($(this).actual('width')),
                 menu_left   = menu_offset.left + menu_width;
@@ -83,7 +83,7 @@
         })
     }
 
-    function Fhavy-Scent_get_scrollbar_width() {
+    function Stelina_get_scrollbar_width() {
         var $inner = jQuery('<div style="width: 100%; height:200px;">test</div>'),
             $outer = jQuery('<div style="width:200px;height:150px; position: absolute; top: 0; left: 0; visibility: hidden; overflow:hidden;"></div>').append($inner),
             inner  = $inner[ 0 ],
@@ -99,26 +99,26 @@
     /* ---------------------------------------------
      MOBILE MENU
      --------------------------------------------- */
-    function Fhavy-Scent_menuclone_all_menus() {
-        if ( !$('.Fhavy-Scent-menu-clone-wrap').length && $('.Fhavy-Scent-clone-mobile-menu').length > 0 ) {
-            $('body').prepend('<div class="Fhavy-Scent-menu-clone-wrap">' +
-                '<div class="Fhavy-Scent-menu-panels-actions-wrap">' +
-                '<span class="Fhavy-Scent-menu-current-panel-title">MENU</span>' +
-                '<a class="Fhavy-Scent-menu-close-btn Fhavy-Scent-menu-close-panels" href="#">x</a></div>' +
-                '<div class="Fhavy-Scent-menu-panels"></div>' +
+    function Stelina_menuclone_all_menus() {
+        if ( !$('.Stelina-menu-clone-wrap').length && $('.Stelina-clone-mobile-menu').length > 0 ) {
+            $('body').prepend('<div class="Stelina-menu-clone-wrap">' +
+                '<div class="Stelina-menu-panels-actions-wrap">' +
+                '<span class="Stelina-menu-current-panel-title">MENU</span>' +
+                '<a class="Stelina-menu-close-btn Stelina-menu-close-panels" href="#">x</a></div>' +
+                '<div class="Stelina-menu-panels"></div>' +
                 '</div>');
         }
         var i                = 0,
             panels_html_args = Array();
-        if ( !$('.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panels #Fhavy-Scent-menu-panel-main').length ) {
-            $('.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panels').append('<div id="Fhavy-Scent-menu-panel-main" class="Fhavy-Scent-menu-panel Fhavy-Scent-menu-panel-main"><ul class="depth-01"></ul></div>');
+        if ( !$('.Stelina-menu-clone-wrap .Stelina-menu-panels #Stelina-menu-panel-main').length ) {
+            $('.Stelina-menu-clone-wrap .Stelina-menu-panels').append('<div id="Stelina-menu-panel-main" class="Stelina-menu-panel Stelina-menu-panel-main"><ul class="depth-01"></ul></div>');
         }
 
-        $('.Fhavy-Scent-clone-mobile-menu').each(function () {
+        $('.Stelina-clone-mobile-menu').each(function () {
             var $this              = $(this),
                 thisOfficeu           = $this,
                 this_menu_id       = thisOfficeu.attr('id'),
-                this_menu_clone_id = 'Fhavy-Scent-menu-clone-' + this_menu_id;
+                this_menu_clone_id = 'Stelina-menu-clone-' + this_menu_id;
 
             if ( !$('#' + this_menu_clone_id).length ) {
                 var thisClone = $this.clone(true); // Clone Wrap
@@ -126,143 +126,143 @@
 
                 thisClone.find('[id]').each(function () {
                     // Change all tab links with href = this id
-                    thisClone.find('.vc_tta-panel-heading a[href="#' + $(this).attr('id') + '"]').attr('href', '#' + Fhavy-Scent_menuadd_string_prefix($(this).attr('id'), 'Fhavy-Scent-menu-clone-'));
-                    thisClone.find('.Fhavy-Scent-menu-tabs .tabs-link a[href="#' + $(this).attr('id') + '"]').attr('href', '#' + Fhavy-Scent_menuadd_string_prefix($(this).attr('id'), 'Fhavy-Scent-menu-clone-'));
-                    $(this).attr('id', Fhavy-Scent_menuadd_string_prefix($(this).attr('id'), 'Fhavy-Scent-menu-clone-'));
+                    thisClone.find('.vc_tta-panel-heading a[href="#' + $(this).attr('id') + '"]').attr('href', '#' + Stelina_menuadd_string_prefix($(this).attr('id'), 'Stelina-menu-clone-'));
+                    thisClone.find('.Stelina-menu-tabs .tabs-link a[href="#' + $(this).attr('id') + '"]').attr('href', '#' + Stelina_menuadd_string_prefix($(this).attr('id'), 'Stelina-menu-clone-'));
+                    $(this).attr('id', Stelina_menuadd_string_prefix($(this).attr('id'), 'Stelina-menu-clone-'));
                 });
 
-                thisClone.find('.Fhavy-Scent-menu-menu').addClass('Fhavy-Scent-menu-menu-clone');
+                thisClone.find('.Stelina-menu-menu').addClass('Stelina-menu-menu-clone');
 
                 // Create main panel if not exists
 
-                var thisMainPanel = $('.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panels #Fhavy-Scent-menu-panel-main ul');
+                var thisMainPanel = $('.Stelina-menu-clone-wrap .Stelina-menu-panels #Stelina-menu-panel-main ul');
                 thisMainPanel.append(thisClone.html());
 
-                Fhavy-Scent_menu_insert_children_panels_html_by_elem(thisMainPanel, i);
+                Stelina_menu_insert_children_panels_html_by_elem(thisMainPanel, i);
             }
         });
     }
 
     // i: For next nav target
-    function Fhavy-Scent_menu_insert_children_panels_html_by_elem($elem, i) {
+    function Stelina_menu_insert_children_panels_html_by_elem($elem, i) {
         if ( $elem.find('.menu-item-has-children').length ) {
             $elem.find('.menu-item-has-children').each(function () {
                 var thisChildItem = $(this);
-                Fhavy-Scent_menu_insert_children_panels_html_by_elem(thisChildItem, i);
-                var next_nav_target = 'Fhavy-Scent-menu-panel-' + i;
+                Stelina_menu_insert_children_panels_html_by_elem(thisChildItem, i);
+                var next_nav_target = 'Stelina-menu-panel-' + i;
 
                 // Make sure there is no duplicate panel id
                 while ( $('#' + next_nav_target).length ) {
                     i++;
-                    next_nav_target = 'Fhavy-Scent-menu-panel-' + i;
+                    next_nav_target = 'Stelina-menu-panel-' + i;
                 }
                 // Insert Next Nav
-                thisChildItem.prepend('<a class="Fhavy-Scent-menu-next-panel" href="#' + next_nav_target + '" data-target="#' + next_nav_target + '"></a>');
+                thisChildItem.prepend('<a class="Stelina-menu-next-panel" href="#' + next_nav_target + '" data-target="#' + next_nav_target + '"></a>');
 
                 // Get sub menu html
                 var sub_menu_html = $('<div>').append(thisChildItem.find('> .submenu').clone()).html();
                 thisChildItem.find('> .submenu').remove();
 
-                $('.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-panels').append('<div id="' + next_nav_target + '" class="Fhavy-Scent-menu-panel Fhavy-Scent-menu-sub-panel Fhavy-Scent-menu-hidden">' + sub_menu_html + '</div>');
+                $('.Stelina-menu-clone-wrap .Stelina-menu-panels').append('<div id="' + next_nav_target + '" class="Stelina-menu-panel Stelina-menu-sub-panel Stelina-menu-hidden">' + sub_menu_html + '</div>');
             });
         }
     }
 
-    function Fhavy-Scent_menuadd_string_prefix(str, prefix) {
+    function Stelina_menuadd_string_prefix(str, prefix) {
         return prefix + str;
     }
 
-    function Fhavy-Scent_menuget_url_var(key, url) {
+    function Stelina_menuget_url_var(key, url) {
         var result = new RegExp(key + "=([^&]*)", "i").exec(url);
         return result && result[ 1 ] || "";
     }
 
-    function Fhavy-Scent_close_mobile_menu() {
+    function Stelina_close_mobile_menu() {
         // BOX MOBILE MENU
         $(document).on('click', '.menu-toggle', function () {
-            $('.Fhavy-Scent-menu-clone-wrap').addClass('open');
+            $('.Stelina-menu-clone-wrap').addClass('open');
             return false;
         });
         // Close box menu
-        $(document).on('click', '.Fhavy-Scent-menu-clone-wrap .Fhavy-Scent-menu-close-panels', function () {
-            $('.Fhavy-Scent-menu-clone-wrap').removeClass('open');
+        $(document).on('click', '.Stelina-menu-clone-wrap .Stelina-menu-close-panels', function () {
+            $('.Stelina-menu-clone-wrap').removeClass('open');
             return false;
         });
         $(document).on('click', function (event) {
             if ( $('body').hasClass('rtl') ) {
                 if ( event.offsetX < 0 )
-                    $('.Fhavy-Scent-menu-clone-wrap').removeClass('open');
+                    $('.Stelina-menu-clone-wrap').removeClass('open');
             } else {
-                if ( event.offsetX > $('.Fhavy-Scent-menu-clone-wrap').width() )
-                    $('.Fhavy-Scent-menu-clone-wrap').removeClass('open');
+                if ( event.offsetX > $('.Stelina-menu-clone-wrap').width() )
+                    $('.Stelina-menu-clone-wrap').removeClass('open');
             }
         });
     }
 
     // Open next panel
-    $(document).on('click', '.Fhavy-Scent-menu-next-panel', function (e) {
+    $(document).on('click', '.Stelina-menu-next-panel', function (e) {
         var $this     = $(this),
             thisItem  = $this.closest('.menu-item'),
-            thisPanel = $this.closest('.Fhavy-Scent-menu-panel'),
+            thisPanel = $this.closest('.Stelina-menu-panel'),
             target_id = $this.attr('href');
 
         if ( $(target_id).length ) {
-            thisPanel.addClass('Fhavy-Scent-menu-sub-opened');
-            $(target_id).addClass('Fhavy-Scent-menu-panel-opened').removeClass('Fhavy-Scent-menu-hidden').attr('data-parent-panel', thisPanel.attr('id'));
+            thisPanel.addClass('Stelina-menu-sub-opened');
+            $(target_id).addClass('Stelina-menu-panel-opened').removeClass('Stelina-menu-hidden').attr('data-parent-panel', thisPanel.attr('id'));
             // Insert current panel title
-            var item_title     = thisItem.find('.Fhavy-Scent-menu-item-title').attr('title'),
+            var item_title     = thisItem.find('.Stelina-menu-item-title').attr('title'),
                 firstItemTitle = '';
 
-            if ( $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').length > 0 ) {
-                firstItemTitle = $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').html();
+            if ( $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').length > 0 ) {
+                firstItemTitle = $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').html();
             }
 
             if ( typeof item_title != 'undefined' && typeof item_title != false ) {
-                if ( !$('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').length ) {
-                    $('.Fhavy-Scent-menu-panels-actions-wrap').prepend('<span class="Fhavy-Scent-menu-current-panel-title"></span>');
+                if ( !$('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').length ) {
+                    $('.Stelina-menu-panels-actions-wrap').prepend('<span class="Stelina-menu-current-panel-title"></span>');
                 }
-                $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').html(item_title);
+                $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').html(item_title);
             }
             else {
-                $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').remove();
+                $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').remove();
             }
 
             // Back to previous panel
-            $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel').remove();
-            $('.Fhavy-Scent-menu-panels-actions-wrap').prepend('<a data-prenttitle="' + firstItemTitle + '" class="Fhavy-Scent-menu-prev-panel" href="#' + thisPanel.attr('id') + '" data-cur-panel="' + target_id + '" data-target="#' + thisPanel.attr('id') + '"></a>');
+            $('.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel').remove();
+            $('.Stelina-menu-panels-actions-wrap').prepend('<a data-prenttitle="' + firstItemTitle + '" class="Stelina-menu-prev-panel" href="#' + thisPanel.attr('id') + '" data-cur-panel="' + target_id + '" data-target="#' + thisPanel.attr('id') + '"></a>');
         }
 
         e.preventDefault();
     });
 
     // Go to previous panel
-    $(document).on('click', '.Fhavy-Scent-menu-prev-panel', function (e) {
+    $(document).on('click', '.Stelina-menu-prev-panel', function (e) {
         var $this        = $(this),
             cur_panel_id = $this.attr('data-cur-panel'),
             target_id    = $this.attr('href');
 
-        $(cur_panel_id).removeClass('Fhavy-Scent-menu-panel-opened').addClass('Fhavy-Scent-menu-hidden');
-        $(target_id).addClass('Fhavy-Scent-menu-panel-opened').removeClass('Fhavy-Scent-menu-sub-opened');
+        $(cur_panel_id).removeClass('Stelina-menu-panel-opened').addClass('Stelina-menu-hidden');
+        $(target_id).addClass('Stelina-menu-panel-opened').removeClass('Stelina-menu-sub-opened');
 
         // Set new back button
         var new_parent_panel_id = $(target_id).attr('data-parent-panel');
         if ( typeof new_parent_panel_id == 'undefined' || typeof new_parent_panel_id == false ) {
-            $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel').remove();
-            $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').html('MAIN MENU');
+            $('.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel').remove();
+            $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').html('MAIN MENU');
         }
         else {
-            $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-prev-panel').attr('href', '#' + new_parent_panel_id).attr('data-cur-panel', target_id).attr('data-target', '#' + new_parent_panel_id);
+            $('.Stelina-menu-panels-actions-wrap .Stelina-menu-prev-panel').attr('href', '#' + new_parent_panel_id).attr('data-cur-panel', target_id).attr('data-target', '#' + new_parent_panel_id);
             // Insert new panel title
-            var item_title = $('#' + new_parent_panel_id).find('.Fhavy-Scent-menu-next-panel[data-target="' + target_id + '"]').closest('.menu-item').find('.Fhavy-Scent-menu-item-title').attr('data-title');
+            var item_title = $('#' + new_parent_panel_id).find('.Stelina-menu-next-panel[data-target="' + target_id + '"]').closest('.menu-item').find('.Stelina-menu-item-title').attr('data-title');
             item_title     = $(this).data('prenttitle');
             if ( typeof item_title != 'undefined' && typeof item_title != false ) {
-                if ( !$('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').length ) {
-                    $('.Fhavy-Scent-menu-panels-actions-wrap').prepend('<span class="Fhavy-Scent-menu-current-panel-title"></span>');
+                if ( !$('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').length ) {
+                    $('.Stelina-menu-panels-actions-wrap').prepend('<span class="Stelina-menu-current-panel-title"></span>');
                 }
-                $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').html(item_title);
+                $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').html(item_title);
             }
             else {
-                $('.Fhavy-Scent-menu-panels-actions-wrap .Fhavy-Scent-menu-current-panel-title').remove();
+                $('.Stelina-menu-panels-actions-wrap .Stelina-menu-current-panel-title').remove();
             }
         }
 
@@ -274,16 +274,16 @@
      --------------------------------------------- */
 
     $(window).on("resize", function () {
-        Fhavy-Scent_resize_megamenu();
-        Fhavy-Scent_close_mobile_menu();
-        Fhavy-Scent_auto_width_vertical_menu();
+        Stelina_resize_megamenu();
+        Stelina_close_mobile_menu();
+        Stelina_auto_width_vertical_menu();
     });
     window.addEventListener('load',
         function (ev) {
-            Fhavy-Scent_resize_megamenu();
-            Fhavy-Scent_close_mobile_menu();
-            Fhavy-Scent_auto_width_vertical_menu();
-            Fhavy-Scent_menuclone_all_menus();
+            Stelina_resize_megamenu();
+            Stelina_close_mobile_menu();
+            Stelina_auto_width_vertical_menu();
+            Stelina_menuclone_all_menus();
         }, false);
 
 })(jQuery); // End of use strict

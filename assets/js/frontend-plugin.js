@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     "use strict";
-    function Fhavy-Scent_init_menu_toggle() {
-        var contain = '.Fhavy-Scent-nav-toggle';
+    function Stelina_init_menu_toggle() {
+        var contain = '.Stelina-nav-toggle';
         $(contain).each(function () {
             var _main = $(this);
             _main.children('.menu-item.parent').each(function () {
@@ -51,15 +51,15 @@ jQuery(document).ready(function ($) {
         $(this).closest('.text-404').find('.search-form').toggleClass('open');
         return false;
     });
-    // ----------Fhavy-Scent_custom_scrollbar-------------------
-    function Fhavy-Scent_custom_scrollbar() {
-        $('.Fhavy-Scent-mini-cart .minicart-items').mCustomScrollbar();
-        $('.Fhavy-Scent-mini-cart .minicart-items').change(function () {
-            $('.Fhavy-Scent-mini-cart .minicart-items').mCustomScrollbar();
+    // ----------Stelina_custom_scrollbar-------------------
+    function Stelina_custom_scrollbar() {
+        $('.Stelina-mini-cart .minicart-items').mCustomScrollbar();
+        $('.Stelina-mini-cart .minicart-items').change(function () {
+            $('.Stelina-mini-cart .minicart-items').mCustomScrollbar();
         });
     }
 
-    function Fhavy-Scent_custom_scrollbar_header_nav() {
+    function Stelina_custom_scrollbar_header_nav() {
         $('.header.vertical-style .header-nav .container-wapper').mCustomScrollbar();
         $('.header.vertical-style .header-nav .container-wapper').change(function () {
             $('.header.vertical-style .header-nav .container-wapper').mCustomScrollbar();
@@ -67,12 +67,12 @@ jQuery(document).ready(function ($) {
     }
 
     //------------------ Video Lightbox------------
-    function Fhavy-Scent_video() {
+    function Stelina_video() {
         $('.quick-install').simpleLightboxVideo();
     }
 
     // --------------------remove_class_equal--------------------------
-    function Fhavy-Scent_remove_class_review() {
+    function Stelina_remove_class_review() {
         var _winw = $(window).innerWidth();
         if (_winw < 992) {
             $('.sevice-item.style-1').removeClass('equal-container').find('.equal-element').removeAttr('style');
@@ -82,8 +82,8 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    // -----------Fhavy-Scent_details_thumd--------------------
-    function Fhavy-Scent_details_thumd_zoom() {
+    // -----------Stelina_details_thumd--------------------
+    function Stelina_details_thumd_zoom() {
         /* ------------------------------------------------
          Arctic modal
          ------------------------------------------------ */
@@ -181,7 +181,7 @@ jQuery(document).ready(function ($) {
 
     $(".chosen-select").chosen({disable_search_threshold: 10});
     // ====================isotop========================
-    function Fhavy-Scent_masonry() {
+    function Stelina_masonry() {
         var masonry = $('.masonry-grid').isotope({
             // set itemSelector so .grid-sizer is not used in layout
             itemSelector: '.grid-item',
@@ -195,30 +195,30 @@ jQuery(document).ready(function ($) {
     }
 
     /* TOGGLE */
-    function Fhavy-Scent_dropdown() {
+    function Stelina_dropdown() {
         $(document).on('click', '.header-control .close', function () {
-            $(this).closest('.Fhavy-Scent-dropdown').removeClass('open');
+            $(this).closest('.Stelina-dropdown').removeClass('open');
         });
         $(document).on('click', function (event) {
-            var _target = $(event.target).closest('.Fhavy-Scent-dropdown');
-            var _allparent = $('.Fhavy-Scent-dropdown');
+            var _target = $(event.target).closest('.Stelina-dropdown');
+            var _allparent = $('.Stelina-dropdown');
 
             if (_target.length > 0) {
                 _allparent.not(_target).removeClass('open');
                 if (
-                    $(event.target).is('[data-Fhavy-Scent="Fhavy-Scent-dropdown"]') ||
-                    $(event.target).closest('[data-Fhavy-Scent="Fhavy-Scent-dropdown"]').length > 0
+                    $(event.target).is('[data-Stelina="Stelina-dropdown"]') ||
+                    $(event.target).closest('[data-Stelina="Stelina-dropdown"]').length > 0
                 ) {
                     _target.toggleClass('open');
                     return false;
                 }
             } else {
-                $('.Fhavy-Scent-dropdown').removeClass('open');
+                $('.Stelina-dropdown').removeClass('open');
             }
         });
     }
 
-    function Fhavy-Scent_mobile_block() {
+    function Stelina_mobile_block() {
         $(document).on('click', '.header-device-mobile .item.has-sub>a', function () {
             $(this).closest('.header-device-mobile').find('.item').removeClass('open');
 
@@ -237,7 +237,7 @@ jQuery(document).ready(function ($) {
     }
 
     // =====================slick============================
-    function Fhavy-Scent_init_carousel() {
+    function Stelina_init_carousel() {
         $('.owl-slick').not('.slick-initialized').each(function () {
             var _this = $(this),
                 _responsive = _this.data('responsive'),
@@ -279,9 +279,9 @@ jQuery(document).ready(function ($) {
     /* ---------------------------------------------
      TAB EFFECT
      --------------------------------------------- */
-    function Fhavy-Scent_tab_fade_effect() {
+    function Stelina_tab_fade_effect() {
         // effect click
-        $(document).on('click', '.Fhavy-Scent-tabs .tab-link a', function () {
+        $(document).on('click', '.Stelina-tabs .tab-link a', function () {
             var tab_id = $(this).attr('href');
             var tab_animated = $(this).data('animate');
 
@@ -623,11 +623,11 @@ jQuery(document).ready(function ($) {
     }
 
     // -----------------count down years months -------------------------------
-    function Fhavy-Scent_countdown() {
-        if ($('.Fhavy-Scent-countdown').length > 0) {
+    function Stelina_countdown() {
+        if ($('.Stelina-countdown').length > 0) {
             var labels = ['Years', 'Months', 'Weeks', 'Days', 'Hrs', 'Mins', 'Secs'];
             var layout = '<span class="box-count day"><span class="number">{dnn}</span> <span class="text">Days</span></span><span class="box-count hrs"><span class="number">{hnn}</span> <span class="text">Hrs</span></span><span class="box-count min"><span class="number">{mnn}</span> <span class="text">Mins</span></span><span class="box-count secs"><span class="number">{snn}</span> <span class="text">Secs</span></span>';
-            $('.Fhavy-Scent-countdown').each(function () {
+            $('.Stelina-countdown').each(function () {
                 var austDay = new Date($(this).data('y'), $(this).data('m') - 1, $(this).data('d'), $(this).data('h'), $(this).data('i'), $(this).data('s'));
                 $(this).countdown({
                     until: austDay,
@@ -639,31 +639,31 @@ jQuery(document).ready(function ($) {
     };
     // --------------------------------------------------------
     $(window).scroll(function () {
-        Fhavy-Scent_custom_scrollbar();
+        Stelina_custom_scrollbar();
     });
     $(window).resize(function () {
         quickview_popup();
         kt_resizeMegamenu();
-        Fhavy-Scent_remove_class_review();
-        Fhavy-Scent_details_thumd_zoom();
-        Fhavy-Scent_custom_scrollbar();
+        Stelina_remove_class_review();
+        Stelina_details_thumd_zoom();
+        Stelina_custom_scrollbar();
     });
     $(window).load(function () {
         newletter_popup();
         quickview_popup();
-        Fhavy-Scent_mobile_block();
-        Fhavy-Scent_remove_class_review();
-        Fhavy-Scent_custom_scrollbar()
+        Stelina_mobile_block();
+        Stelina_remove_class_review();
+        Stelina_custom_scrollbar()
     });
-    Fhavy-Scent_dropdown();
-    Fhavy-Scent_init_carousel();
-    Fhavy-Scent_remove_class_review();
-    Fhavy-Scent_tab_fade_effect();
-    Fhavy-Scent_details_thumd_zoom();
-    Fhavy-Scent_video();
+    Stelina_dropdown();
+    Stelina_init_carousel();
+    Stelina_remove_class_review();
+    Stelina_tab_fade_effect();
+    Stelina_details_thumd_zoom();
+    Stelina_video();
     kt_resizeMegamenu();
-    Fhavy-Scent_custom_scrollbar();
-    Fhavy-Scent_countdown();
-    Fhavy-Scent_init_menu_toggle();
-    Fhavy-Scent_custom_scrollbar_header_nav();
+    Stelina_custom_scrollbar();
+    Stelina_countdown();
+    Stelina_init_menu_toggle();
+    Stelina_custom_scrollbar_header_nav();
 }); 
